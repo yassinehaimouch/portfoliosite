@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nav Bar  */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #121212;
+    z-index: 1000;
+}
+
+.logo{
+    text-decoration: none;
+    color: white;
+    position: fixed;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    list-style-type: none;
+}
+.nav-links a{
+    color: #8A8A8A;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+.nav-links a:hover{
+    color: #fff;
+}
+.nav-links .resume{
+    font-weight: 600;
+    color: #000;
+    background-color: #BB86FC;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.nav-links .resume:hover{
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    padding: 10px 14px;
+}
+
+.burger{
+    display: none;
+    margin-top:30px;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+@media screen and (max-width:768px){
+   
+    nav {
+        justify-content: space-between;
+    }
+    .nav-links{
+        position: fixed;
+        left: 0px;
+        padding-right: 20px;
+        height: 100vh;
+        align-items: center;
+        background-color: #9e8d8d;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        top:0;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li a {
+        color: #fff;
+    }
+    .nav-links li{
+        
+        opacity: 0;
+        margin-bottom: 100px;
+    }
+    .burger{
+        position: fixed;
+        right:0;
+        display: block;
+        margin-right: 40px;
+        
+    }
+
+    nav a {
+        margin-left: 40px;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* end of nav bar */
+
+body{
+    background-color: #121212;
+}
+
+
+.container{
+    margin-top: 25px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.par{
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    margin: 0 auto;
+    font-size: 25px;
+    margin-top: 50px;
+    line-height: 1.5;
+}
+
+.img{
+    margin-top: 30px;
+    margin-right: 20px;
+}
+.title{
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 150px;
+}
+.container-1{
+    width:60%;
+    margin:50px auto;
+    /* margin-left:200px;
+    margin-right:200px;     */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width:768px){
+    .title{
+        font-size: 60px;
+    }
+    .par{
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .container-1{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 25px;
+        margin-bottom: 0px;
+        flex-direction: column-reverse;
+        
+    }
+
+     
+
+}
+@media screen and (max-width:1024px){
+    .title{
+        font-size: 60px;
+    }
+
+    .par{
+        margin-left: 0;
+    }
+    .container-1{
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 0px;
+        padding: 50px;
+    }
+
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.icons a{
+    text-decoration: none;
+    color: #8A8A8A;
+    margin: 10px;
+}
+section i:hover{
+    color: #BB86FC; 
+}
