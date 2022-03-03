@@ -5,7 +5,7 @@
 }
 
 body{
-    background: url(/background1.svg);
+    background: url(../images/background1.svg);
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
